@@ -1,4 +1,5 @@
 "use strict";
+
 const texts = {
   en: {
     texts: [
@@ -24,25 +25,24 @@ const texts = {
   },
 };
 
-document.querySelector(".danish").addEventListener("click", showDanish);
+let locale = "da";
 
-function showDanish() {
-  texts.da.texts.forEach(({ text, location }) => {
-    const element = document.querySelector(location);
-    if (element) {
-      element.textContent = text;
-    }
-  });
-}
+document.querySelector("#select").value = "da";
+document.querySelector("#select").addEventListener("change", languageChange);
 
-document.querySelector(".english").addEventListener("click", showEnglish);
+window.addEventListener("DOMContentLoaded", () => {
+  languageChange();
+});
 
-function showEnglish() {
-  texts.en.texts.forEach(({ text, location }) => {
-    const element = document.querySelector(location);
-    if (element) {
-      element.textContent = text;
-    }
+function languageChange(evt) {
+  locale = document.querySelector("#select").value;
+  console.log("locale", locale);
+
+  texts[locale].texts.forEach((element) => {
+    const elements = document.querySelectorAll(element.location);
+    elements.forEach((el) => {
+      el.textContent = element.text;
+    });
   });
 }
 
