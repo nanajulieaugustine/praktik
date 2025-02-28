@@ -20,7 +20,7 @@ img {
 }
 
 .video {
-  margin-top: 4rem;
+  margin-top: 10rem;
   margin-left: -9rem;
   transition: transform 0.25s ease;
 }
@@ -55,7 +55,7 @@ h2 {
 p {
   font-family: Helvetica, sans-serif;
   font-size: 15px;
-  line-height: 1.2rem;
+  line-height: 1.5rem;
 }
 
 footer p {
