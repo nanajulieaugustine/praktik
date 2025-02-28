@@ -14,7 +14,7 @@ main {
 img {
   position: relative;
   z-index: -1;
-  width: 180%;
+  width: 200%;
   margin-left: 3.5rem;
   top: -23%;
 }
@@ -68,6 +68,7 @@ a {
   color: #536baf;
   font-weight: 600;
   margin-top: 0.5rem;
+  margin-left: 1.5rem;
 }
 
 a:hover {
@@ -86,9 +87,10 @@ select {
   height: 2rem;
   border: 1px solid #cc9c5d;
   border-radius: 5px;
+  margin-left: 1.5rem;
 }
 
-@media (max-width: 750px) {
+@media (max-width: 1050px) {
   h1 {
     font-size: 5rem;
     line-height: 4.5rem;
@@ -107,9 +109,5 @@ select {
     margin-left: 0;
     top: 0;
     width: 100%;
-  }
-
-  a {
-    margin: 5rem;
   }
 }
